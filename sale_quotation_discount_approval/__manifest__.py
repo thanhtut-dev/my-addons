@@ -6,6 +6,7 @@
     'category': 'Sales',
     'summary': 'Approval workflow for Sales quotation discounts with email notifications',
     'description': 'static/description/index.html',
+    'images': ['static/description/mail_approve.png'],
     'author': 'Than Htut',
     'website': 'https://thanhtut-dev.odoo.com/',
     'license': 'LGPL-3',
