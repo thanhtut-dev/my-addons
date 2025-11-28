@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
-    'name': 'Sale Discount Approval',
+    'name': 'Sale Quotation Discount Approval',
     'version': '16.0.1',
     'category': 'Sales',
-    'description': 'Sales order discount approval workflow with Brevo SMTP Server. '
-                   'Allows manager/supervisor approval based on discount thresholds.',
+    'summary': 'Approval workflow for Sales quotation discounts with email notifications',
+    'description': 'static/description/index.html',
     'author': 'Than Htut',
-    'website': 'https://github.com/thanhtut-dev',
-    'license': 'OPL-1',
-    'depends': ['base', 'web', 'sale','sales_team', 'mail'],
+    'website': 'https://thanhtut-dev.odoo.com/',
+    'license': 'LGPL-3',
+    'depends': [ 'sale','sales_team', 'mail'],
     'data': [
         'security/sale_discount_approval_security.xml',
         'data/mail_templates.xml',
