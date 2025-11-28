@@ -1,0 +1,12 @@
+<odoo>
+  <record id="action_sale_approval_requests" model="ir.actions.act_window">
+    <field name="name">Sales Approval Requests</field>
+    <field name="res_model">sale.order</field>
+    <field name="view_mode">kanban,tree,form</field>
+    <field name="domain">[('approval_state','=','waiting')]</field>
+  </record>
+
+  <menuitem id="menu_sale_discounts_root" groups="sale_discount_approval.group_sale_discount_approver" name="Sale Approvals" parent="sale.sale_menu_root"/>
+  <menuitem id="menu_sale_approval_requests" groups="sale_discount_approval.group_sale_discount_approver" name="Approval Requests" parent="menu_sale_discounts_root"
+            action="action_sale_approval_requests"/>
+</odoo>

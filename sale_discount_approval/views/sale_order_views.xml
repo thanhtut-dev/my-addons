@@ -1,0 +1,36 @@
+<odoo>
+  <record id="view_order_form_inherit_discount_approval" model="ir.ui.view">
+    <field name="name">sale.order.form.discount.approval</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="arch" type="xml">
+      <!-- Add approval ribbon / header info -->
+      <xpath expr="//sheet//group[@name='sale_header']" position="inside">
+        <group>
+          <field name="discount_percent" widget="float" readonly="1"/>
+          <field name="approval_state" readonly="1"/>
+        </group>
+      </xpath>
+
+      <!-- Add Approve / Reject / Request Approval buttons -->
+      <xpath expr="//header" position="inside">
+        <button name="action_request_approval" type="object" string="Request Approval"
+                 class="btn-primary" attrs="{'invisible': [('approval_state', '!=', 'draft')]}"/>
+        <button name="action_approve" type="object" string="Approve"
+                attrs="{'invisible': ['|',('approval_state','!=','waiting'),('approval_state','=','approved')]}"
+                class="btn-success" groups="sale_discount_approval.group_sale_discount_approver"/>
+        <button name="action_reject" type="object" string="Reject"
+                attrs="{'invisible': ['|',('approval_state','!=','waiting'),('approval_state','=','rejected')]}"
+                class="btn-danger" groups="sale_discount_approval.group_sale_discount_approver"/>
+      </xpath>
+
+      <!-- Add an approval chatter tab maybe -->
+      <xpath expr="//notebook/page[@name='other_information']" position="inside">
+        <group>
+          <field name="approval_reason"/>
+          <field name="approval_requested_by"/>
+        </group>
+      </xpath>
+    </field>
+  </record>
+</odoo>
