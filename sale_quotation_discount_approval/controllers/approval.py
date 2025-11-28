@@ -16,11 +16,12 @@ class DiscountApprovalController(http.Controller):
 
         if decision == 'approve':
             order.sudo().write({'approval_state': 'approved'})
-            order.sudo().message_post(body=_("Order approved by %s") % order.team_id.user_id.name)
+            order.sudo().message_post(body=_("Order approved by %s") % order.team_id.user_id.name, email_from = order.team_id.user_id.email)
             return "Sale order approved successfully. You may close this window."
 
         if decision == 'reject':
-            order.sudo().message_post(body=_("Order rejected by %s") % order.team_id.user_id.name)
+            order.sudo().write({'approval_state': 'rejected'})
+            order.sudo().message_post(body=_("Order rejected by %s") % order.team_id.user_id.name, email_from = order.team_id.user_id.email)
             return "Sale order rejected. You may close this window."
 
         return "Invalid decision."
