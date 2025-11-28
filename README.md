@@ -8,4 +8,4 @@ experience across Odoo 16–18 (Community & Enterprise).
 
 ### 1. sale_discount_approval
 - Adds approval workflow for discounts in Sales Order.
-- Supervisor or Manager approval required based on threshold.
+- Team leader approval required based on whether total discount is exceed discount limit defined in sales team or not.
