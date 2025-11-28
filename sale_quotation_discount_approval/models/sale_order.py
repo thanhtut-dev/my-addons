@@ -58,7 +58,7 @@ class SaleOrder(models.Model):
             self.sudo().message_post(body=_("Approval requested, but no approvers found. Check rule configuration."))
 
     def send_approval_request_email(self):
-        template = self.env.ref('sale_discount_approval.mail_template_discount_approval')
+        template = self.env.ref('sale_quotation_discount_approval.mail_template_discount_approval')
         template.send_mail(self.id, force_send=True)
 
     def _build_approval_url(self, decision):
