@@ -7,7 +7,7 @@
     'summary': 'Approval workflow for Sales quotation discounts with email notifications',
     'description': 'static/description/index.html',
     'images': ['static/description/thumbnail.png'],
-    'author': 'Dev & Beyond',
+    'author': 'thanhtut-dev',
     'website': 'https://thanhtut-dev.odoo.com/',
     'license': 'LGPL-3',
     'depends': [ 'sale','sales_team', 'mail'],
