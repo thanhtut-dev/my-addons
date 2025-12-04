@@ -4,4 +4,11 @@ from odoo.exceptions import UserError, ValidationError
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    partner_ids = fields.Many2many('res.partner', string='Customers list by sales team', related="team_id.partner_ids")
+    partner_ids = fields.Many2many('res.partner', string='Customers list by sales team', compute='_compute_partner_ids')
+
+    @api.depends('team_id')
+    def _compute_partner_ids(self):
+        if self.env.user.has_group('sales_team.group_sale_manager'):
+            self.partner_ids = self.env['res.partner'].search([('customer_rank', '>', 0)])
+        else:
+            self.partner_ids = self.team_id.partner_ids

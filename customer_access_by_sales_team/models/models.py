@@ -4,7 +4,8 @@ class Base(models.AbstractModel):
     _inherit = 'base'
 
     @api.model
-    def web_search_read(self, domain=None, fields=None, offset=0, limit=None, order=None, count_limit=None):
+    @api.readonly
+    def web_search_read(self, domain, specification, offset=0, limit=None, order=None, count_limit=None):
         """
             Override of web_search_read to apply Sales Team–based record visibility rules.
 
@@ -60,11 +61,11 @@ class Base(models.AbstractModel):
             #3. CRM Lead/opportunity list
             if self._name == 'crm.lead' and not self.env.user.has_group('sales_team.group_sale_manager'):
                 domain += [('team_id', 'in', teams.ids)]
-        return super(Base, self).web_search_read(domain, fields, offset, limit, order, count_limit)
+        return super(Base, self).web_search_read(domain, specification, offset, limit, order, count_limit)
 
     @api.model
-    def web_read_group(self, domain, fields, groupby, limit=None, offset=0, orderby=False,
-                       lazy=True, expand=False, expand_limit=None, expand_orderby=False):
+    @api.readonly
+    def web_read_group(self, domain, fields, groupby, limit=None, offset=0, orderby=False, lazy=True):
         """
             Override of web_read_group to apply Sales Team–based grouping restrictions.
 
@@ -121,5 +122,4 @@ class Base(models.AbstractModel):
             # 3. CRM Lead/opportunity list
             if self._name == 'crm.lead' and not self.env.user.has_group('sales_team.group_sale_manager'):
                 domain += [('team_id', 'in', teams.ids)]
-        return super(Base, self).web_read_group(domain, fields, groupby, limit, offset, orderby,
-                       lazy, expand, expand_limit, expand_orderby)
+        return super(Base, self).web_read_group(domain, fields, groupby, limit, offset, orderby, lazy)
