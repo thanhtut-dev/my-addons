@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Customer Access by Sales Team',
-    'version': '17.0.1',
+    'version': '18.0',
     'category': 'Sales',
     'summary': 'Restrict salespersons to customers assigned to their Sales Team, and allow access only to Sale Orders,'
             'CRM Leads, and Opportunities created by their own team.',
