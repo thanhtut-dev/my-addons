@@ -4,7 +4,8 @@
     'name': 'Product Access by Sales Team',
     'version': '18.0',
     'category': 'Sales',
-    'summary': '',
+    'summary': 'Restrict product visibility by Sales Team. Allows each team to access and sell only products from'
+               ' assigned categories, including filtered quotation templates and product variants.',
     'description': 'static/description/index.html',
     'images': ['static/description/thumbnail.png'],
     'author': 'thanhtut-dev',
