@@ -1,0 +1,30 @@
+<odoo>
+  <record id="crm_team_view_form_inherit_product_access_by_sales_team" model="ir.ui.view">
+    <field name="name">crm.team.view.form.inherit.product.access.by.sales.team</field>
+    <field name="model">crm.team</field>
+    <field name="inherit_id" ref="sales_team.crm_team_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//notebook" position="inside">
+          <page string="Product Categories" name="product_category_ids">
+            <field name="product_category_ids" mode="kanban" class="w-100">
+                <kanban>
+                    <field name="id"/>
+                    <field name="display_name"/>
+                    <field name="parent_id" />
+                    <templates>
+                    <t t-name="card">
+                        <div>
+                            <strong>Category: </strong><field name="display_name"/>
+                        </div>
+                        <div>
+                            <strong>Parent Category: </strong><field name="parent_id"/>
+                        </div>
+                    </t>
+                </templates>
+                </kanban>
+            </field>
+          </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>
