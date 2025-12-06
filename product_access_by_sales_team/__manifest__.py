@@ -11,7 +11,7 @@
     'author': 'thanhtut-dev',
     'website': 'https://thanhtut-dev.odoo.com/',
     'license': 'LGPL-3',
-    'depends': ['account','crm','sale','sales_team','sale_management','web'],
+    'depends': ['sale','sales_team','sale_management','web'],
     'data': [
             'views/crm_team_views.xml',
             'views/sale_order_views.xml',
