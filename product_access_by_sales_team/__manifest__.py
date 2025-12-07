@@ -7,7 +7,7 @@
     'summary': 'Restrict product visibility by Sales Team. Allows each team to access and sell only products from'
                ' assigned categories, including filtered quotation templates and product variants.',
     'description': 'static/description/index.html',
-    'images': ['static/description/thumbnail.png'],
+    'images': ['static/description/thumbnail.jpg'],
     'author': 'thanhtut-dev',
     'website': 'https://thanhtut-dev.odoo.com/',
     'license': 'LGPL-3',
