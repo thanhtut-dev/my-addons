@@ -53,13 +53,13 @@ class Base(models.AbstractModel):
                 '|', ('user_id', '=', self.env.user.id), ('member_ids', 'in', [self.env.user.id])
             ])
             #1. Customer List
-            if self._name == 'res.partner' and self.env.context.get('res_partner_search_mode') == 'customer' and not self.env.user.has_group('sales_team.group_sale_manager'):
+            if teams and self._name == 'res.partner' and self.env.context.get('res_partner_search_mode') == 'customer' and not self.env.user.has_group('sales_team.group_sale_manager'):
                 domain += [('id', 'in', teams.partner_ids.ids)]
             #2. Sale List
-            if self._name == 'sale.order'and not self.env.user.has_group('sales_team.group_sale_manager'):
+            if teams and self._name == 'sale.order'and not self.env.user.has_group('sales_team.group_sale_manager'):
                 domain += [('team_id', 'in', teams.ids)]
             #3. CRM Lead/opportunity list
-            if self._name == 'crm.lead' and not self.env.user.has_group('sales_team.group_sale_manager'):
+            if teams and self._name == 'crm.lead' and not self.env.user.has_group('sales_team.group_sale_manager'):
                 domain += [('team_id', 'in', teams.ids)]
         return super(Base, self).web_search_read(domain, specification, offset, limit, order, count_limit)
 
@@ -112,14 +112,14 @@ class Base(models.AbstractModel):
                 '|', ('user_id', '=', self.env.user.id), ('member_ids', 'in', [self.env.user.id])
             ])
             # 1. Customer List
-            if self._name == 'res.partner' and self.env.context.get(
+            if teams and self._name == 'res.partner' and self.env.context.get(
                     'res_partner_search_mode') == 'customer' and not self.env.user.has_group(
                     'sales_team.group_sale_manager'):
                 domain += [('id', 'in', teams.partner_ids.ids)]
             # 2. Sale List
-            if self._name == 'sale.order' and not self.env.user.has_group('sales_team.group_sale_manager'):
+            if teams and self._name == 'sale.order' and not self.env.user.has_group('sales_team.group_sale_manager'):
                 domain += [('team_id', 'in', teams.ids)]
             # 3. CRM Lead/opportunity list
-            if self._name == 'crm.lead' and not self.env.user.has_group('sales_team.group_sale_manager'):
+            if teams and self._name == 'crm.lead' and not self.env.user.has_group('sales_team.group_sale_manager'):
                 domain += [('team_id', 'in', teams.ids)]
         return super(Base, self).web_read_group(domain, fields, groupby, limit, offset, orderby, lazy)
