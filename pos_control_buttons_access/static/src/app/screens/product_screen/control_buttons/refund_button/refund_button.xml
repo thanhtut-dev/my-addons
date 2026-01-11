@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pos_control_buttons_access.RefundButton" t-inherit="point_of_sale.RefundButton" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('control-button')]" position="replace">
+            <div class="control-button" t-att-class="{'disabled': !this.pos.cashier.enable_pos_refund_buttons}"
+                 t-on-click="() => this.click()">
+            <i class="fa fa-undo" role="img" aria-label="Refund" title="Refund" />
+            Refund
+        </div>
+        </xpath>
+    </t>
+
+</templates>
