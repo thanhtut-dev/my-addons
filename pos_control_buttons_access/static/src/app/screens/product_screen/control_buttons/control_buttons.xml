@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pos_control_buttons.ControlButtons" t-inherit="point_of_sale.ControlButtons" t-inherit-mode="extension">
+        <xpath expr="//button[hasclass('btn btn-secondary btn-lg py-5')][2]" position="attributes">
+            <attribute name="t-att-disabled">!pos.cashier.enable_pos_refund_buttons</attribute>
+        </xpath>
+    </t>
+
+</templates>
