@@ -1,5 +1,6 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError, UserError
+
 class PurchaseBudget(models.Model):
     _name = "purchase.budget"
 
@@ -14,17 +15,15 @@ class PurchaseBudget(models.Model):
     state = fields.Selection([('draft', 'Draft'),('confirm', 'Confirm')], string='Status', default='draft')
 
     def action_confirm(self):
-        for rec in self:
-            rec.state = 'confirm'
+        self.state = 'confirm'
 
     def action_draft(self):
-        for rec in self:
-            rec.state = 'draft'
+        self.state = 'draft'
 
     def unlink(self):
         for rec in self:
             if rec.state != 'draft':
-                raise UserError(_('You can not delete confirmed purchase budgets.'))
+                raise UserError(_('Confirmed purchase budgets cannot be deleted.'))
         return super(PurchaseBudget, self).unlink()
 
 class PurchaseBudgetLine(models.Model):

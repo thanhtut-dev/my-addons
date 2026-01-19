@@ -1,3 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_purchase_budget,access_purchase_budget,model_purchase_budget,purchase.group_purchase_manager,1,1,1,1
-access_purchase_budget_line,access_purchase_budget_line,model_purchase_budget_line,purchase.group_purchase_manager,1,1,1,1
+access_purchase_budget,access_purchase_budget,model_purchase_budget,base.group_user,1,1,1,1
+access_purchase_budget_line,access_purchase_budget_line,model_purchase_budget_line,base.group_user,1,1,1,1
