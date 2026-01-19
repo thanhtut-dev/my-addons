@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="purchase_budget_form_view" model="ir.ui.view">
+            <field name="name">purchase.budget.form.view</field>
+            <field name="model">purchase.budget</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_confirm" type="object" string="Confirm" invisible="state != 'draft'" class="btn-primary"/>
+                        <button name="action_draft" type="object" string="Reset to Draft" invisible="state != 'confirm'" class="btn-primary"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm"/>
+                    </header>
+                    <sheet>
+                    <div class="oe_title">
+                        <div class="oe_title">
+                        <h1>
+                            <field name="name"/><br/>
+                        </h1>
+                    </div>
+                    </div>
+                        <group>
+                                <group>
+                                    <field name="company_id" readonly="1" />
+                                </group>
+                                <group>
+                                    <field name="date_from" />
+                                    <field name="date_to" />
+                                </group>
+                        </group>
+                        <notebook>
+                            <page string="Budget for Departments">
+                                <field name="line_ids" readonly="state == 'confirm'">
+                                    <list editable="bottom">
+                                        <field name="name"/>
+                                        <field name="department_id"/>
+                                        <field name="amount"/>
+                                        <field name="purchase_amount"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="purchase_budget_list_view" model="ir.ui.view">
+            <field name="name">purchase.budget.view.list</field>
+            <field name="model">purchase.budget</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="company_id"/>
+                    <field name="state"/>
+                </list>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="action_purchase_budget">
+            <field name="name">Purchase Budget</field>
+            <field name="res_model">purchase.budget</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <menuitem id="menu_action_open_purchase_budget" name="Purchase Budgets" parent="purchase.menu_purchase_config" action="action_purchase_budget"/>
+
+    </data>
+</odoo>
