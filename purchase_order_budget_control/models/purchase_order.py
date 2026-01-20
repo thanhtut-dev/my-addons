@@ -64,10 +64,11 @@ class PurchaseOrder(models.Model):
                                                           ('date_to', '>=', self.date_order),
                                                           ('state', '=', 'confirm'),
                                                           ('company_id', '=', self.company_id.id),])
-        budget_line = budget_list.mapped('line_ids').filtered(lambda l: l.department_id == self.department_id)[0]
-        if not budget_line:
+        budget_lines = budget_list.mapped('line_ids').filtered(lambda l: l.department_id == self.department_id)
+        if not budget_lines:
             raise ValidationError(_('No confirmed budget control is configured for this department.'))
-        self.department_budget_line = budget_line
+        self.department_budget_line = budget_lines[0]
+        budget_line = budget_lines[0]
         order_list = self.env['purchase.order'].search([('date_order', '>=', budget_line.purchase_budget_id.date_from),
                                                         ('date_order', '<=', budget_line.purchase_budget_id.date_to),
                                                         ('department_id', '=', self.department_id.id),
@@ -121,6 +122,7 @@ class PurchaseOrder(models.Model):
         Purchase orders with available budget can be approved
         without additional approval checks.
         """
+        self.ensure_one()
         if self.budget_status == 'available':
             return True
         return super(PurchaseOrder, self)._approval_allowed()
