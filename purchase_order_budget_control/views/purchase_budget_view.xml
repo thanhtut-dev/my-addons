@@ -33,9 +33,9 @@
                                 <field name="line_ids" readonly="state == 'confirm'">
                                     <list editable="bottom">
                                         <field name="name"/>
-                                        <field name="department_id"/>
+                                        <field name="department_id" options="{'no_create': True}"/>
                                         <field name="amount"/>
-                                        <field name="purchase_amount"/>
+                                        <field name="purchase_amount" readonly="1"/>
                                     </list>
                                 </field>
                             </page>
