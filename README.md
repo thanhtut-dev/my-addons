@@ -26,3 +26,14 @@ experience across Odoo 16–18 (Community & Enterprise).
 - Refund and discount button restriction.
 - Simple and user-friendly configuration.
 - Improved POS security and control.
+
+## 5. purchase_order_budget_control
+- Department-based purchase budget configuration.
+- Budget period control with start and end dates.
+- Automatic validation of Purchase Orders against confirmed budgets.
+- Real-time tracking of purchase amount consumption.
+- Automatic approval enforcement when budget limits are exceeded.
+- Activity notification sent to department managers for approval.
+- Seamless integration with the standard Purchase workflow.
+- Multi-company support.
+- Fully compatible with Odoo (v16, v17, v18).
