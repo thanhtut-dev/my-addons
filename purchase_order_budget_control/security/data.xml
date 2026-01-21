@@ -12,6 +12,13 @@
             <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
         </record>
 
+        <record id="purchase_budget_rule" model="ir.rule">
+            <field name="name">Purchase Budget Record Rule</field>
+            <field ref="model_purchase_budget" name="model_id"/>
+            <field name="domain_force">[('company_id', 'in', company_ids + [False])]</field>
+            <field name="groups" eval="[(6, 0, [ref('base.group_user')])]"/>
+        </record>
+
         <record id="po_department_filter" model="ir.rule">
             <field name="name">PO Filtered By Department</field>
             <field ref="model_purchase_order" name="model_id"/>
