@@ -1,5 +1,0 @@
-<odoo>
-  <record id="group_sale_discount_approver" model="res.groups">
-    <field name="name">Sale Discount Approver</field>
-  </record>
-</odoo>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<templates id="template" xml:space="preserve">
-
-	<t t-name="pos_control_buttons_access.TicketScreen" t-inherit="point_of_sale.TicketScreen" t-inherit-mode="extension" owl="1">
-        <xpath expr="//ActionpadWidget" position="attributes">
-            <attribute name="disable_refund_btn">!this.pos.cashier.enable_pos_refund_buttons</attribute>
-        </xpath>
-	</t>
-</templates>
