@@ -8,8 +8,8 @@
                ' assigned categories, including filtered quotation templates and product variants.',
     'description': 'static/description/index.html',
     'images': ['static/description/thumbnail.jpg'],
-    'author': 'thanhtut-dev',
-    'website': 'https://thanhtut-dev.odoo.com/',
+    'author': 'Qubit Prime',
+    'website': 'https://qubitprime.io',
     'license': 'LGPL-3',
     'depends': ['sale','sales_team','sale_management','web'],
     'data': [

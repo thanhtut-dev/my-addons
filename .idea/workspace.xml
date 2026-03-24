@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="38c1b7c5-c560-43c1-bf77-1047e83e2d49" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/customer_access_by_sales_team/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer_access_by_sales_team/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer_access_by_sales_team/static/description/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer_access_by_sales_team/static/description/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pos_control_buttons_access/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pos_control_buttons_access/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pos_control_buttons_access/static/description/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pos_control_buttons_access/static/description/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_access_by_sales_team/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/product_access_by_sales_team/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_access_by_sales_team/static/description/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/product_access_by_sales_team/static/description/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/purchase_order_budget_control/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/purchase_order_budget_control/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/purchase_order_budget_control/static/description/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/purchase_order_budget_control/static/description/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sale_quotation_discount_approval/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/sale_quotation_discount_approval/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sale_quotation_discount_approval/static/description/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sale_quotation_discount_approval/static/description/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="38xXiRlhtj7EZsxEmTFhOMawqK2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;16.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/odoo/projects/my_addons_16&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38c1b7c5-c560-43c1-bf77-1047e83e2d49" name="Changes" comment="" />
+      <created>1769742322805</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769742322805</updated>
+    </task>
+    <servers />
+  </component>
+</project>

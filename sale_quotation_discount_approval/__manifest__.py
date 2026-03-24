@@ -7,8 +7,8 @@
     'summary': 'Approval workflow for Sales quotation discounts with email notifications',
     'description': 'static/description/index.html',
     'images': ['static/description/thumbnail.png'],
-    'author': 'thanhtut-dev',
-    'website': 'https://thanhtut-dev.odoo.com/',
+    'author': 'Qubit Prime',
+    'website': 'https://qubitprime.io',
     'license': 'LGPL-3',
     'depends': [ 'sale','sales_team', 'mail'],
     'data': [

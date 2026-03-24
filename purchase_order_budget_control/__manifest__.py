@@ -7,8 +7,8 @@
     'summary': 'Department-based Purchase Budget Control with Automatic Approval Workflow.',
     'description': 'static/description/index.html',
     'images': ['static/description/thumbnail.png'],
-    'author': 'thanhtut-dev',
-    'website': 'https://thanhtut-dev.odoo.com/',
+    'author': 'Qubit Prime',
+    'website': 'https://qubitprime.io',
     'license': 'LGPL-3',
     'depends': ['base','purchase'],
     'data': [
