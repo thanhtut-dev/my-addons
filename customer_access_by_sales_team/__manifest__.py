@@ -8,8 +8,8 @@
             'CRM Leads, and Opportunities created by their own team.',
     'description': 'static/description/index.html',
     'images': ['static/description/thumbnail.png'],
-    'author': 'thanhtut-dev',
-    'website': 'https://thanhtut-dev.odoo.com/',
+    'author': 'Qubit Prime',
+    'website': 'https://qubitprime.io',
     'license': 'LGPL-3',
     'depends': ['account','crm','sale','sales_team','web'],
     'data': [
